@@ -12,5 +12,5 @@ This project was built using the following technologies:
 <li>Figma</li>
 <li>Trello</li>
 
-# landing page
+# Landing page
 
