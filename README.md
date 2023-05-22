@@ -3,9 +3,8 @@ This project is the game of Wheel of Dom themed after the Monsters, Inc. movie. 
 
 # Technologies Used
 This project was built using the following technologies:
-  <li>HTML5</li>
-  <li>CSS3</li>
-  <li>JavaScript</li>
+<li>HTML5</li>
+<li>CSS3</li><li>JavaScript</li>
 
 # Tools
 
