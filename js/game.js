@@ -48,14 +48,6 @@ async function startAnimation() {
     const currentIndex = Math.floor((Date.now() - startTime) / rotationDuration) % namesArray.length;
     nameBtn.textContent = namesArray[currentIndex];
 
-    const doorWidth = document.getElementById("door-content").offsetWidth;
-    const imageWidth = images[currentImageIndex].offsetWidth;
-    const buttonWidth = nameBtn.offsetWidth;
-    const displacement = (doorWidth - imageWidth - buttonWidth) / 2;
-
-    nameBtn.classList.add("moving-btn");
-    nameBtn.style.transform = `translateX(${displacement}px)`;
-
     await delay(rotationDuration);
 
     if (Date.now() >= endTime - rotationDuration) {

@@ -29,7 +29,7 @@ main {
 
 .door {
 padding: 5rem;
-transform: scale(1.2); /* Adjust the scale factor to your desired size */
+width: 200px;
 }
 
 /* Estilos generales */
@@ -77,7 +77,7 @@ background-color: rgba(255, 255, 255, 0.5);
 
 
 .door {
-  width: 250px;
+  width: 350px;
 }
 
 /* Estilos para los botones */
@@ -88,11 +88,6 @@ background-color: rgba(255, 255, 255, 0.5);
   align-items: center;
   height: 250px;
   margin-top: 4rem;
-}
-
-.buttons-container button {
-  margin-bottom: 10px;
-  background-color: #B5D424;
 }
 
 button {
