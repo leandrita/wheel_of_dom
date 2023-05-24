@@ -1,6 +1,5 @@
 let names = localStorage.getItem('names');
 names = names ? JSON.parse(names) : [];
-
 const nameList = document.getElementById("name-list");
 const addNameBtn = document.getElementById("add-name-btn");
 const quitNameBtn = document.getElementById("quit-name-btn");

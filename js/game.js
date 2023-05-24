@@ -18,11 +18,13 @@ async function spinWheel() {
   const chooseRandomIndex = Math.floor(Math.random() * namesArray.length);
   const chosenName = namesArray[chooseRandomIndex];
   nameBtn.textContent = chosenName;
+  localStorage.setItem('chosenName', chosenName);
   namesArray.splice(chooseRandomIndex, 1);
   if (namesArray.length === 1) {
     nameBtn.textContent = winningName + " win!";
     return;
   }
+  window.location.href = "/html/crush.html";
 }
 
 function delay(ms) {
