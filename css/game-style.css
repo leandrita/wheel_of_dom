@@ -1,0 +1,95 @@
+:root {
+  --color-green: #B5D424;
+}
+
+@media (max-width: 900px) {
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('/img/background.jpeg');
+  }
+
+  header,
+  footer {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    width: 350px;
+  }
+
+
+  
+  /* Estilos para los botones */
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .buttons-container button {
+    margin-bottom: 10px;
+    background-color: var(--color-green);
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #B5D424;
+    border-radius: 8px;
+    border-color: black;
+  }
+
+   #name-choosed-btn {
+      width: 110px;
+      height: 40px;
+      position: absolute;
+      margin-top: 5rem;
+      z-index: 1;
+      margin-left: 65px;
+      background-color: white;
+      border: 2px solid black;
+  }
+
+  .icon-cards__item {
+    display: none;
+    width: 250px;
+  }
+
+  #spin-btn {
+    margin-bottom: 10px;
+    display: block;
+    margin-bottom: 10px;
+    transform: translateX(0);
+    transition: transform 0.5s;
+  }
+  
+  .icon-cards__item:first-child {
+    display: block;
+  }
+
+  .image-transition {
+    animation-name: slideOut;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(10%);
+    }
+  }
+  
+  
+    
+}

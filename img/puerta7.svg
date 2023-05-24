@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="890.027px" height="1747.686px" viewBox="0 0 890.027 1747.686" enable-background="new 0 0 890.027 1747.686"
+	 xml:space="preserve">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-228.1787" y1="539.3667" x2="1133.6259" y2="1325.605">
+	<stop  offset="0" style="stop-color:#E6E6E6"/>
+	<stop  offset="0.4002" style="stop-color:#9D9DA2"/>
+	<stop  offset="0.605" style="stop-color:#7C7D84"/>
+</linearGradient>
+<polygon fill="url(#SVGID_1_)" points="890.027,1747.529 0,1747.529 0,144.15 57.29,72.444 246.345,19.221 302.251,55.442 
+	359.264,0 545.548,0 583.988,49.159 660.867,19.405 837.912,78.451 890.027,144.15 "/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="379.7031" y1="59.8711" x2="510.3232" y2="135.2847">
+	<stop  offset="0.04" style="stop-color:#E6E6E6"/>
+	<stop  offset="0.3343" style="stop-color:#9D9DA2"/>
+	<stop  offset="0.485" style="stop-color:#7C7D84"/>
+	<stop  offset="0.5762" style="stop-color:#88898F"/>
+	<stop  offset="0.7418" style="stop-color:#A8A9AD"/>
+	<stop  offset="0.9614" style="stop-color:#DCDCDD"/>
+	<stop  offset="1" style="stop-color:#E6E6E6"/>
+</linearGradient>
+<circle fill="url(#SVGID_2_)" cx="445.013" cy="97.579" r="75.401"/>
+<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="391.2285" y1="66.5259" x2="498.7979" y2="128.6311">
+	<stop  offset="0.095" style="stop-color:#999999"/>
+	<stop  offset="0.2024" style="stop-color:#A5A5A5"/>
+	<stop  offset="0.3965" style="stop-color:#C5C5C5"/>
+	<stop  offset="0.565" style="stop-color:#E6E6E6"/>
+	<stop  offset="0.8026" style="stop-color:#BABABA"/>
+	<stop  offset="1" style="stop-color:#999999"/>
+</linearGradient>
+<circle fill="url(#SVGID_3_)" cx="445.014" cy="97.579" r="62.095"/>
+<circle fill="#353232" cx="445.014" cy="97.579" r="45.832"/>
+<rect x="98.238" y="192.686" fill="#1E1D1B" width="695" height="1555"/>
+<rect x="126.238" y="212.686" fill="#493511" width="638" height="1535"/>
+<rect x="142.238" y="233.686" fill="#753D0B" width="606" height="1514"/>
+<rect x="186.238" y="1235.686" fill="#493511" width="240" height="476"/>
+<rect x="472.238" y="1235.686" fill="#493511" width="239" height="476"/>
+<rect x="488.238" y="1256.686" fill="#753D0B" width="207" height="436"/>
+<rect x="201.238" y="1256.686" fill="#753D0B" width="207" height="436"/>
+<rect x="186.238" y="718.686" fill="#493511" width="240" height="476"/>
+<rect x="472.238" y="718.686" fill="#493511" width="239" height="476"/>
+<rect x="488.238" y="739.686" fill="#753D0B" width="207" height="436"/>
+<rect x="201.238" y="739.686" fill="#753D0B" width="207" height="436"/>
+<path fill="#493511" d="M711.167,668.686H178.924c0,0-5.714-116.577,2.957-171.713c11.615-73.863,81.315-193.966,260.208-193.966
+	c221.768,0,255.336,125.028,267.6,199.933C718.764,558.385,711.167,668.686,711.167,668.686z"/>
+<path fill="#753D0B" d="M694.421,651.686H197.662c0,0-10.226-102.857,2.957-152.135c18.25-68.219,73.714-184.719,246.221-184.719
+	c199.662,0,233.917,121.479,246.103,190.49C701.88,555.946,694.421,651.686,694.421,651.686z"/>
+<rect x="719.238" y="1022.686" fill="#BC9904" width="22" height="68"/>
+</svg>

@@ -1,0 +1,111 @@
+/* Estilos generales */
+
+:root {
+  --color-green: #B5D424;
+}
+
+@media (max-width: 900px) {
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('/img/background.jpeg');
+}
+
+header, footer {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  justify-content: center;   
+}
+
+.logo {
+  width: 350px;
+}
+
+.door {
+padding: 5rem;
+transform: scale(1.2); /* Adjust the scale factor to your desired size */
+}
+
+/* Estilos generales */
+
+.image-container {
+position: relative;
+display: inline-block;
+}
+
+
+/* Estilos para la lista de nombres */
+#names-container {
+position: absolute;
+top: 20%;
+left: 52%;
+transform: translate(-50%);
+padding: 10px;
+width: 5rem;
+height: 8rem;
+overflow: auto;
+background-color: rgba(255, 255, 255, 0.5);
+} 
+
+#name-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#name-list li {
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#name-list li.selected {
+  background-color: #007BCC;
+  color: white;
+  width: 100%;
+}
+
+
+.door {
+  width: 250px;
+}
+
+/* Estilos para los botones */
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 250px;
+  margin-top: 4rem;
+}
+
+.buttons-container button {
+  margin-bottom: 10px;
+  background-color: #B5D424;
+}
+
+button {
+  padding: 10px;
+  background-color: #B5D424;
+  border-radius: 8px;
+  border-color: black;
+  height: 4rem;
+  width: 5rem;
+}
+
+#spin-btn, .door {
+  display: block;
+}
+
+}
