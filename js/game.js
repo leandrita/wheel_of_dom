@@ -1,13 +1,14 @@
 const names = localStorage.getItem('names');
 let namesArray = names ? JSON.parse(names) : [];
+let winningName = localStorage.getItem('winningName');
 const images = Array.from(document.getElementsByClassName("icon-cards__item"));
 let currentImageIndex = 0;
 const rotationDuration = 500;
-const totalRotationTime = 8000;
+const totalRotationTime = 9000;
 const resetBtn = document.getElementById("reset-btn");
 const nameBtn = document.getElementById("name-choosed-btn");
-
-let winningName = namesArray[namesArray.length - 1];
+const song = new Audio('/sound/animation.mp3')
+winningName = namesArray[namesArray.length - 1];
 
 resetBtn.addEventListener("click", function() {
   localStorage.removeItem('names');
@@ -18,26 +19,30 @@ async function spinWheel() {
   const chooseRandomIndex = Math.floor(Math.random() * namesArray.length);
   const chosenName = namesArray[chooseRandomIndex];
   nameBtn.textContent = chosenName;
-  localStorage.setItem('chosenName', chosenName);
   namesArray.splice(chooseRandomIndex, 1);
+  localStorage.setItem('names', JSON.stringify(namesArray));
   if (namesArray.length === 1) {
-    nameBtn.textContent = winningName + " win!";
+    localStorage.setItem('winningName', winningName);
+    window.location.href = "/html/winner.html";
     return;
   }
+  await delay(1000);
   window.location.href = "/html/crush.html";
-}
+    return;
+  }
+
 
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 async function startAnimation() {
+  song.play();
+  await delay (2000);
   const startTime = Date.now();
   const endTime = startTime + totalRotationTime;
-
   while (Date.now() < endTime - rotationDuration) {
     currentImageIndex = Math.floor((Date.now() - startTime) / rotationDuration) % images.length;
-
     images.forEach(function (image, index) {
       if (index === currentImageIndex) {
         image.classList.add("image-transition");

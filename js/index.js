@@ -5,6 +5,8 @@ const addNameBtn = document.getElementById("add-name-btn");
 const quitNameBtn = document.getElementById("quit-name-btn");
 const startBtn = document.getElementById("start-btn");
 const clearListBtn = document.getElementById("clear-list-btn");
+const soundRemove = new Audio('/sound/name-delete.mp3');
+const soundAdd = new Audio('/sound/name-entry.mp3');
 
 // Función para renderizar la lista de nombres
 function renderNameList() {
@@ -34,6 +36,7 @@ addNameBtn.addEventListener("click", function() {
   const name = prompt("Nombre del jugador:");
   if (name) {
     names.push(name);
+    soundAdd.play();
     // Guardar el array en el almacenamiento local
     localStorage.setItem('names', JSON.stringify(names));
     renderNameList();
@@ -48,6 +51,7 @@ quitNameBtn.addEventListener("click", function() {
       const name = selectedName.textContent;
       const index = names.indexOf(name);
       if (index !== -1) {
+        soundRemove.play();
         names.splice(index, 1);
         // Guardar el array en el almacenamiento local
         localStorage.setItem('names', JSON.stringify(names));
@@ -61,6 +65,7 @@ quitNameBtn.addEventListener("click", function() {
 
 //Boton de vaciar la lista
 clearListBtn.addEventListener("click", function() {
+  soundRemove.play();
   names = [];
   // Guardar el array vacío en el almacenamiento local
   localStorage.setItem('names', JSON.stringify(names));

@@ -1,14 +1,7 @@
-/* Estilos generales */
-
 :root {
-  --color-green: #B5D424;
-}
-
-@media (max-width: 900px) {
-
-body {
-  font-family: Arial, sans-serif;
-  background-image: url('/img/background.jpeg');
+  --color-green: RGB(181, 212, 36);
+  --color-blue: RGB(11, 109, 255);
+  --color-white: rgba(255, 255, 255, 0.5);
 }
 
 header, footer {
@@ -23,35 +16,17 @@ main {
   justify-content: center;   
 }
 
-.logo {
-  width: 350px;
-}
-
-.door {
-padding: 5rem;
-width: 200px;
-}
-
-/* Estilos generales */
-
-.image-container {
-position: relative;
-display: inline-block;
-}
-
-
-/* Estilos para la lista de nombres */
 #names-container {
-position: absolute;
-top: 20%;
-left: 52%;
-transform: translate(-50%);
-padding: 10px;
-width: 5rem;
-height: 8rem;
-overflow: auto;
-background-color: rgba(255, 255, 255, 0.5);
-} 
+  position: absolute;
+  top: 30%;
+  left: 31%;
+  transform: translate(-50%);
+  width: 35%; 
+  height: 30%;
+  overflow-y: auto;
+  background-color: var(--color-white);
+}
+
 
 #name-list {
   list-style-type: none;
@@ -70,37 +45,48 @@ background-color: rgba(255, 255, 255, 0.5);
 }
 
 #name-list li.selected {
-  background-color: #007BCC;
+  background-color: var(--color-blue);
   color: white;
   width: 100%;
 }
 
-
-.door {
-  width: 350px;
-}
-
-/* Estilos para los botones */
 .buttons-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   height: 250px;
-  margin-top: 4rem;
+  margin-top: 8rem;
+  margin-left: 1rem;
 }
 
-button {
-  padding: 10px;
-  background-color: #B5D424;
-  border-radius: 8px;
-  border-color: black;
-  height: 4rem;
-  width: 5rem;
+.button {
+ margin-bottom: 2rem;
 }
 
-#spin-btn, .door {
-  display: block;
+
+body {
+  font-family: Merriweather Sans;
 }
 
+.bg-custom-image {
+  background-image: url("/img/background.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.green-btn {
+  background-color: var(--color-green);
+}
+
+.blue-btn {
+  background-color: var(--color-blue);
+}
+
+.remove-btn {
+  background-color: none;
+  margin-left: 30px;
+  padding: 0 4px;
+  font-style: bold;
+  border: solid black 1px;
 }

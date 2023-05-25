@@ -1,0 +1,42 @@
+
+:root {
+  --color-green: RGB(181, 212, 36);
+  --color-blue: RGB(11, 109, 255);
+  --color-white: rgba(255, 255, 255, 0.5);
+}
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('/img/background.jpeg');
+    }
+    
+    header, footer {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    
+    main {
+      padding: 20px;
+      display: flex;
+      justify-content: center;   
+    }
+    
+    .logo {
+        width: 350px;
+      }
+
+      .title-container {
+        width: 70%;
+        background-color: rgba(255, 255, 255, 0.5);;
+        padding: 1rem;
+        border-radius: 10px;
+      }
+
+      button {
+        padding: 10px;
+        background-color: var(--color-blue);
+        border-radius: 8px;
+        border-color: black;
+        font-weight: bold;
+        padding: 1rem;
+      }

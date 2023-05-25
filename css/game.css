@@ -1,8 +1,8 @@
 :root {
-  --color-green: #B5D424;
+  --color-green: RGB(181, 212, 36);
+  --color-blue: RGB(11, 109, 255);
+  --color-white: rgba(255, 255, 255, 0.5);
 }
-
-@media (max-width: 900px) {
   body {
     font-family: Arial, sans-serif;
     background-image: url('/img/background.jpeg');
@@ -25,7 +25,7 @@
     width: 350px;
   }
 
-  /* Estilos para los botones */
+  
   .buttons-container {
     display: flex;
     flex-direction: column;
@@ -40,9 +40,10 @@
   
   button {
     padding: 10px;
-    background-color: #B5D424;
+    background-color: var(--color-blue);
     border-radius: 8px;
     border-color: black;
+    font-weight: bold;
   }
 
    #name-choosed-btn {
@@ -52,6 +53,10 @@
       margin-bottom: 1rem;
   }
 
+  #reset-btn {
+    padding: 1rem;
+  }
+  
   .icon-cards__item {
     display: none;
     width: 250px;
@@ -81,7 +86,6 @@
       transform: translateX(0);
     }
     to {
-      transform: translateX(10%);
+      transform: translateX(15%);
     }
   }
-}

@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wheel of dom</title>
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body>
-  <header>
+<body class="bg-custom-image h-screen"></body>
+<header class="h-1/6 flex justify-center items-center p-8">
     <img class="logo" src="/img/logo.svg" alt="Logo">
   </header>
   <main>
     <div class="image-container">
-      <img class="door" src="/img/puerta1.svg">
+      <img class="door" src="/img/puertaBoo.svg">
       <div id="names-container">
         <ul id="name-list"></ul>
       </div>
     </div>
     <div class="buttons-container">
-      <button id="add-name-btn">Añadir Nombre</button>
-      <button id="quit-name-btn">Quitar Nombre</button>
-      <button id="clear-list-btn">Vaciar Lista</button>
+      <button class="rounded-lg py-2 px-10 blue-btn font-bold hover:bg-gray-300 shadow-lg"
+      style="box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);"  id="add-name-btn">Add name</button>
+      <button class="rounded-lg py-2 px-10 blue-btn font-bold hover:bg-gray-300 shadow-lg"
+      style="box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);"  id="quit-name-btn">Remove name</button>
+      <button class="rounded-lg py-2 px-10 blue-btn font-bold hover:bg-gray-300 shadow-lg"
+      style="box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);"  id="clear-list-btn">Remove all</button>
     </div>
   </main>
   
   <footer>
-    <button id="start-btn">Start</button>
+    <button class="rounded-lg py-2 px-10 blue-btn font-bold hover:bg-gray-300 shadow-lg"
+    style="box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);"  id="start-btn">Start</button>
   </footer>
 
   <script src="/js/index.js"></script>
