@@ -62,8 +62,8 @@ async function startAnimation() {
         if (index === images.length - 1) {
           image.style.display = "none";
         } else {
-          image.style.display = "none";
-        }
+           image.style.display = "none";
+         }
       });
 
       images[images.length - 1].src = "/img/puertafinal1.svg";
