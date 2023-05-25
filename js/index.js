@@ -8,7 +8,6 @@ const clearListBtn = document.getElementById("clear-list-btn");
 const soundRemove = new Audio('/sound/name-delete.mp3');
 const soundAdd = new Audio('/sound/name-entry.mp3');
 
-// Función para renderizar la lista de nombres
 function renderNameList() {
   nameList.innerHTML = "";
   for (let i = 0; i < names.length; i++) {
@@ -19,7 +18,6 @@ function renderNameList() {
   }
 }
 
-// Función para seleccionar un nombre de la lista
 function selectName() {
   var selectedName = document.querySelector("li.selected");
   if (selectedName) {
@@ -28,22 +26,16 @@ function selectName() {
   this.classList.add("selected");
 }
 
-// Renderizar la lista inicial de nombres al abrir la página
-renderNameList();
-
-//Prompt para pedir nombre
 addNameBtn.addEventListener("click", function() {
   const name = prompt("Nombre del jugador:");
   if (name) {
     names.push(name);
     soundAdd.play();
-    // Guardar el array en el almacenamiento local
     localStorage.setItem('names', JSON.stringify(names));
     renderNameList();
   }
 });
 
-// Quitar un nombre de la lista
 quitNameBtn.addEventListener("click", function() {
   if (names.length > 0) {
     const selectedName = document.querySelector("li.selected");
@@ -53,7 +45,6 @@ quitNameBtn.addEventListener("click", function() {
       if (index !== -1) {
         soundRemove.play();
         names.splice(index, 1);
-        // Guardar el array en el almacenamiento local
         localStorage.setItem('names', JSON.stringify(names));
         renderNameList();
       }
@@ -63,16 +54,13 @@ quitNameBtn.addEventListener("click", function() {
   }
 });
 
-//Boton de vaciar la lista
 clearListBtn.addEventListener("click", function() {
   soundRemove.play();
   names = [];
-  // Guardar el array vacío en el almacenamiento local
   localStorage.setItem('names', JSON.stringify(names));
   renderNameList();
 });
 
-// Boton de start
 startBtn.addEventListener("click", function() {
   if (names.length >= 2) {
     window.location.href = "/html/game.html";
