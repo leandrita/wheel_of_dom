@@ -1,7 +1,7 @@
 const names = localStorage.getItem('names');
 let namesArray = names ? JSON.parse(names) : [];
 let winningName = localStorage.getItem('winningName');
-const images = Array.from(document.getElementsByClassName("icon-cards__item"));
+const images = Array.from(document.getElementsByClassName("spin_door"));
 let currentImageIndex = 0;
 const rotationDuration = 500;
 const totalRotationTime = 9000;

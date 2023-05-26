@@ -57,7 +57,7 @@
     padding: 1rem;
   }
   
-  .icon-cards__item {
+  .spin_door {
     display: none;
     width: 250px;
   }
@@ -71,7 +71,7 @@
     height: 3rem;
   }
   
-  .icon-cards__item:first-child {
+  .spin_door:first-child {
     display: block;
   }
 
