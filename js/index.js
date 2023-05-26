@@ -49,7 +49,7 @@ quitNameBtn.addEventListener("click", function() {
         renderNameList();
       }
     } else {
-      alert("Por favor, seleccione un nombre de la lista.");
+      alert("Please select a name from the list");
     }
   }
 });
@@ -65,6 +65,6 @@ startBtn.addEventListener("click", function() {
   if (names.length >= 2) {
     window.location.href = "/html/game.html";
   } else {
-    alert("Debe haber al menos 2 nombres en la lista para continuar.");
+    alert("You must have two participants to continue");
   }
 });
