@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wheel of Dom</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monsterly</title>
     <link rel="stylesheet" type="text/css" href="/css/game.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body>
-    <header>
+
+<body class="bg-custom-image h-screen">
+    <header class="h-1/6 flex justify-center items-center p-8">
         <img class="logo" src="/img/logo.svg" alt="Monsterly logo">
     </header>
-    <main>
-        <div>
-            <button id="spin-btn" onclick="startAnimation()" alt="button to start turning the doors">Spin</button>
-        </div>
-        <div>
-        <button id="name-choosed-btn"></button>
-        </div>
-        <div id="door-content">
-            <div class="icon-cards__content">
-                <img class="spin_door" src="/img/puerta1.svg" alt="door that rotates until one is selected">
-                <img class="spin_door" src="/img/puerta2.svg" alt="door that rotates until one is selected">
-                <img class="spin_door" src="/img/puerta3.svg" alt="door that rotates until one is selected">
-                <img class="spin_door" src="/img/puerta4.svg" alt="door that rotates until one is selected">
-                <img class="spin_door" src="/img/puerta5.svg" alt="door that rotates until one is selected">
-                <img class="spin_door" src="/img/puerta6.svg" alt="door that rotates until one is selected">
-              </div>
-          </div>          
+    <main class="h-4/6 flex flex-col justify-between items-center p-2">
+        <button class="rounded-lg py-2 px-8 blue-btn font-bold text-white hover:bg-gray-300 sdw" id="spin-btn"
+            onclick="startAnimation()">Spin</button>
+        <button
+            class="w-24 h-11 rounded-lg py-2 px-8 l-violet-btn bg-gray-200 font-bold text-center hover:bg-gray-300 border border-solid border-black"
+            id="name-choosed-btn"></button>
+        <section class="w-3/5" id="door-content">
+            <img class="spin_door hidden" src="/img/puerta1.svg" alt="door that rotates until one is selected">
+            <img class="spin_door hidden" src="/img/puerta2.svg" alt="door that rotates until one is selected">
+            <img class="spin_door hidden" src="/img/puerta3.svg" alt="door that rotates until one is selected">
+            <img class="spin_door hidden" src="/img/puerta4.svg" alt="door that rotates until one is selected">
+            <img class="spin_door hidden" src="/img/puerta5.svg" alt="door that rotates until one is selected">
+            <img class="spin_door hidden" src="/img/puerta6.svg" alt="door that rotates until one is selected">
+        </section>
     </main>
-    <footer>
-        <button id="reset-btn" alt="button to stop the game and return to the main menu">Reset</button>
+    <footer class="h-1/6 flex justify-center items-center p-8">
+        <button class="rounded-lg py-2 px-8 purple-btn font-bold text-white hover:bg-gray-300 sdw"
+            id="reset-btn">Reset</button>
     </footer>
     <script src="/js/game.js"></script>
 </body>
+
 </html>

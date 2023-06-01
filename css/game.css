@@ -1,91 +1,51 @@
 :root {
   --color-green: RGB(181, 212, 36);
   --color-blue: RGB(11, 109, 255);
-  --color-white: rgba(255, 255, 255, 0.5);
+  --color-white: RGB(255, 255, 255);
+  --color-black: RGB(0, 0, 0);
+  --color-beige: RGB(173, 158, 137);
+  --color-violet: RGB(110, 128, 197);
+  --color-l-violet: RGB(186, 182, 225);
+  --color-purple: RGB(176, 83, 184);
 }
-  body {
-    font-family: Arial, sans-serif;
-    background-image: url('/img/background.jpeg');
-  }
 
-  header,
-  footer {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-  }
+body {
+  font-family: Merriweather Sans;
+}
 
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.bg-custom-image {
+  background-image: url("/img/background.jpeg");
+  background-size: cover;
+  background-position: center;
+}
 
-  .logo {
-    width: 350px;
-  }
+.blue-btn {
+  background-color: var(--color-blue);
+}
 
-  
-  .buttons-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-  }
+.purple-btn {
+  background-color: var(--color-purple);
+}
 
-  .buttons-container button {
-    margin-bottom: 10px;
-    background-color: var(--color-green);
-  }
-  
-  button {
-    padding: 10px;
-    background-color: var(--color-blue);
-    border-radius: 8px;
-    border-color: black;
-    font-weight: bold;
-  }
+.sdw {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
 
-   #name-choosed-btn {
-      width: 110px;
-      height: 40px;
-      background-color: rgba(255, 255, 255, 0.5);
-      margin-bottom: 1rem;
-  }
+.spin_door:first-child {
+  display: block;
+}
 
-  #reset-btn {
-    padding: 1rem;
-  }
-  
-  .spin_door {
-    display: none;
-    width: 250px;
-  }
+.image-transition {
+  animation-name: slideOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
 
-  #spin-btn {
-    margin-bottom: 10px;
-    display: block;
+@keyframes slideOut {
+  from {
     transform: translateX(0);
-    transition: transform 0.5s;
-    width: 6rem;
-    height: 3rem;
   }
-  
-  .spin_door:first-child {
-    display: block;
+  to {
+    transform: translateX(15%);
   }
-
-  .image-transition {
-    animation-name: slideOut;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-  }
-
-  @keyframes slideOut {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(15%);
-    }
-  }
+}
