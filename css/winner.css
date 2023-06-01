@@ -19,6 +19,9 @@
       padding: 20px;
       display: flex;
       justify-content: center;   
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
     }
     
     .logo {
@@ -39,4 +42,35 @@
         border-color: black;
         font-weight: bold;
         padding: 1rem;
+      }
+
+      .mike-sullivan {
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        animation: mike-sullivan-shaking 0.3s infinite;
+      }
+
+      .mike {
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: flex-start;
+      }
+
+      .sulley {
+        height: 170px;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: flex-end;
+      }
+
+      @keyframes mike-sullivan-shaking {
+        0% { transform: rotate(0deg); }
+        25% { transform: rotate(5deg); }
+        50% { transform: rotate(0eg); }
+        75% { transform: rotate(-5deg); }
+        100% { transform: rotate(0deg); }
       }
