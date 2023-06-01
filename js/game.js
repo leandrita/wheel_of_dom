@@ -7,7 +7,7 @@ const rotationDuration = 500;
 const totalRotationTime = 9000;
 const resetBtn = document.getElementById("reset-btn");
 const nameBtn = document.getElementById("name-choosed-btn");
-const song = new Audio('/sound/animation.mp3')
+const song = new Audio('/sound/animation.mp3');
 winningName = namesArray[namesArray.length - 1];
 
 resetBtn.addEventListener("click", function() {
@@ -28,17 +28,16 @@ async function spinWheel() {
   }
   await delay(1000);
   window.location.href = "/html/crush.html";
-    return;
-  }
-
+  return;
+}
 
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function startAnimation() {
+async function startRotation() {
   song.play();
-  await delay (2000);
+  await delay(2000);
   const startTime = Date.now();
   const endTime = startTime + totalRotationTime;
   while (Date.now() < endTime - rotationDuration) {
@@ -51,33 +50,35 @@ async function startAnimation() {
         image.style.display = "none";
       }
     });
-
     const currentIndex = Math.floor((Date.now() - startTime) / rotationDuration) % namesArray.length;
     nameBtn.textContent = namesArray[currentIndex];
 
     await delay(rotationDuration);
-
-    if (Date.now() >= endTime - rotationDuration) {
-      images.forEach(function (image, index) {
-        if (index === images.length - 1) {
-          image.style.display = "none";
-        } else {
-           image.style.display = "none";
-         }
-      });
-
-      images[images.length - 1].src = "/img/puertafinal1.svg";
-      images[images.length - 1].style.display = "block";
-      await spinWheel();
-    }
-
-    images.forEach(function (image) {
-      image.classList.remove("image-transition");
-    });
-
-    nameBtn.classList.remove("moving-btn");
-    nameBtn.style.transform = "";
   }
+  await endRotation();
 }
 
-spinBtn.addEventListener("click", startAnimation);
+async function endRotation() {
+  images.forEach(function (image, index) {
+    if (index === images.length - 1) {
+      image.style.display = "none";
+    } else {
+      image.style.display = "none";
+    }
+  });
+
+  images[images.length - 1].src = "/img/puertafinal1.svg";
+  images[images.length - 1].style.display = "block";
+  await spinWheel();
+  
+  images.forEach(function (image) {
+    image.classList.remove("image-transition");
+  });
+
+  nameBtn.classList.remove("moving-btn");
+  nameBtn.style.transform = "";
+}
+
+const spinBtn = document.getElementById("spin-btn");
+spinBtn.addEventListener("click", startRotation);
+
