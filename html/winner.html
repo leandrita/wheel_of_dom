@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monsterly</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" type="text/css" href="/css/winner.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <title>Wheel of Doom</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
-<body>
-    <header>
+
+<body class="bg-custom-image h-screen">
+    <header class="h-1/5 flex justify-center items-center p-8">
         <img class="logo" src="/img/logo.svg" alt="Monsterly">
-      </header>
-    <main>
-        <div class="title-container">
-        <h1>Congratulations, <span class="name"></span>, Mike and Sulley have saved your door<h1>
-        </div>
-        <div class="mike-sullivan">
-            <img class="mike" src="../img/Mike-Wazowski.png" alt="Mike smiling">
-            <img class="sulley"src="../img/James-Sullivan1.png" alt="Sullivan smiling and point at">
-        </div>
+    </header>
+    <main class="h-3/5 flex flex-col justify-around items-center p-2">
+        <section class="title-container w-4/6 p-4 rounded-lg bg-gray-200 border border-solid">
+            <h1 class="text-2xl font-bold txt-color">Congratulations <span class="name"></span>... Mike and Sulley have
+                saved your
+                door!<h1>
+        </section>
+        <section class="mike-sullivan flex justify-between items-end">
+            <img class="mike h-32 flex flex-start" src="../img/Mike-Wazowski.png" alt="Mike Wazowski smiling">
+            <img class="sulley h-52 flex flex-end" src="../img/James-Sullivan1.png" alt="James Sullivan smiling">
+        </section>
     </main>
-    <footer>
-        <button id="reset-btn" alt="button to return to the main menu">Reset</button> 
+    <footer class="h-1/5 flex justify-center items-center p-8">
+        <button class="rounded-lg py-2 px-10 purple-btn font-bold text-white hover:bg-gray-300 sdw"
+            id="reset-btn">Reset</button>
     </footer>
     <script src="/js/winner.js"></script>
 </body>
+
 </html>

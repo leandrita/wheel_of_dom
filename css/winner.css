@@ -1,76 +1,43 @@
-
 :root {
-  --color-green: RGB(181, 212, 36);
-  --color-blue: RGB(11, 109, 255);
-  --color-white: rgba(255, 255, 255, 0.5);
+  --color-purple: RGB(176, 83, 184);
+  --color-beige: RGB(173, 158, 137);
 }
-    body {
-      font-family: Arial, sans-serif;
-      background-image: url('/img/background.jpeg');
-    }
-    
-    header, footer {
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-    }
-    
-    main {
-      padding: 20px;
-      display: flex;
-      justify-content: center;   
-      flex-direction: column;
-      align-items: center;
-      gap: 50px;
-    }
-    
-    .logo {
-        width: 350px;
-      }
 
-      .title-container {
-        width: 70%;
-        background-color: rgba(255, 255, 255, 0.5);;
-        padding: 1rem;
-        border-radius: 10px;
-      }
+body {
+  font-family: Merriweather Sans;
+}
 
-      button {
-        padding: 10px;
-        background-color: var(--color-blue);
-        border-radius: 8px;
-        border-color: black;
-        font-weight: bold;
-        padding: 1rem;
-      }
+.bg-custom-image {
+  background-image: url("/img/background.jpeg");
+  background-size: cover;
+  background-position: center;
+}
 
-      .mike-sullivan {
-        display: flex;
-        flex-direction: row;
-        align-items: end;
-        animation: mike-sullivan-shaking 0.3s infinite;
-      }
+.title-container {
+  border: var(--color-beige);
+}
+.txt-color {
+  color: var(--color-purple);
+}
 
-      .mike {
-        height: 100px;
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        align-items: flex-start;
-      }
+.purple-btn {
+  background-color: var(--color-purple);
+}
 
-      .sulley {
-        height: 170px;
-        display: flex;
-        flex-direction: row;
-        justify-content: end;
-        align-items: flex-end;
-      }
+.sdw {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
 
-      @keyframes mike-sullivan-shaking {
-        0% { transform: rotate(0deg); }
-        25% { transform: rotate(5deg); }
-        50% { transform: rotate(0eg); }
-        75% { transform: rotate(-5deg); }
-        100% { transform: rotate(0deg); }
-      }
+.mike-sullivan {
+  animation: mike-sullivan-jumping 0.3s infinite;
+}
+
+@keyframes mike-sullivan-jumping {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
