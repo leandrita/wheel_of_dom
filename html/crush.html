@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monsterly</title>
     <link rel="stylesheet" href="/css/crush.css">
-    <title>Wheel of dom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body>
-    <header>
+
+<body class="bg-custom-image h-screen">
+    <header class="h-1/5 flex justify-center items-center p-8">
         <img class="logo" src="/img/logo.svg" alt="Monsterly logo">
-      </header>
-      <main>
-    <div class="container">
-        <img id="image" src="/img/puertafinal1.svg" alt="door that is crushed">
-    </div>
+    </header>
+    <main class="h-4/5 flex justify-around p-2">
+        <section class="container relative flex items-center justify-center w-350 h-780 overflow-hidden">
+            <img class="absolute h-full object-cover transition-transform duration-300 ease-in transition-opacity duration-300 ease-in"
+                id="image" src="/img/puertafinal1.svg" alt="door that is crushed">
+        </section>
     </main>
     <script src="/js/crush.js"></script>
 </body>
+
 </html>
