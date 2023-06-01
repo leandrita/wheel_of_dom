@@ -1,69 +1,13 @@
 :root {
   --color-green: RGB(181, 212, 36);
   --color-blue: RGB(11, 109, 255);
-  --color-white: rgba(255, 255, 255, 0.5);
+  --color-white: RGBA(255, 255, 255, 0.5);
+  --color-black: RGB(0, 0, 0);
+  --color-beige: RGB(173, 158, 137);
+  --color-violet: RGB(110, 128, 197);
+  --color-l-violet: RGB(186, 182, 225);
+  --color-purple: RGB(176, 83, 184);
 }
-
-header, footer {
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-main {
-  padding: 20px;
-  display: flex;
-  justify-content: center;   
-}
-
-#names-container {
-  position: absolute;
-  top: 30%;
-  left: 31%;
-  transform: translate(-50%);
-  width: 35%; 
-  height: 30%;
-  overflow-y: auto;
-  background-color: var(--color-white);
-}
-
-
-#name-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#name-list li {
-  cursor: pointer;
-  text-align: center;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-#name-list li.selected {
-  background-color: var(--color-blue);
-  color: white;
-  width: 100%;
-}
-
-.buttons-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 250px;
-  margin-top: 8rem;
-  margin-left: 1rem;
-}
-
-.button {
- margin-bottom: 2rem;
-}
-
 
 body {
   font-family: Merriweather Sans;
@@ -75,18 +19,39 @@ body {
   background-position: center;
 }
 
-.green-btn {
-  background-color: var(--color-green);
+.bd-list {
+  border: var(--color-beige);
+}
+
+#name-list li {
+  cursor: pointer;
+  text-align: center;
+  color: var(--color-blue);
+  /* transition: background-color 0.2s, color 0.2s; */
+}
+
+#name-list li.selected {
+  background-color: var(--color-purple);
+  color: white;
+  width: 100%;
 }
 
 .blue-btn {
   background-color: var(--color-blue);
 }
 
-.remove-btn {
-  background-color: none;
-  margin-left: 30px;
-  padding: 0 4px;
-  font-style: bold;
-  border: solid black 1px;
+.violet-btn {
+  background-color: var(--color-violet);
+}
+
+.l-violet-btn {
+  background-color: var(--color-l-violet);
+}
+
+.purple-btn {
+  background-color: var(--color-purple);
+}
+
+.sdw {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
 }
