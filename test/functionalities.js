@@ -15,10 +15,6 @@ function getPlayerName() {
     return prompt("Name:");
   }
   
-  function addNameToList(names, name) {
-    names.push(name);
-    localStorage.setItem('names', JSON.stringify(names));
-}
   
 
 module.exports = {

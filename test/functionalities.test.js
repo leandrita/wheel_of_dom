@@ -1,6 +1,6 @@
 const index = require('./functionalities');
 const validateNames = index.validateNames;
-const { isNameSelected, getPlayerName, addNameToList } = require('./functionalities');
+const { isNameSelected, getPlayerName } = require('./functionalities');
 
 describe('validateNames', () => {
     test('should return true for an array with two or more non-empty names', () => {
@@ -59,37 +59,5 @@ describe('getPlayerName', () => {
   });
 });
 
-
-describe('addNameToList', () => {
-  let names = [];
-
-  beforeEach(() => {
-    localStorage.clear();
-  });
-
-  test('should add the name to the list and update the local storage', () => {
-    const localStorageMock = (function() {
-      let store = {};
-
-      return {
-        getItem: function(key) {
-          return store[key];
-        },
-        setItem: function(key, value) {
-          store[key] = value.toString();
-        },
-        clear: function() {
-          store = {};
-        }
-      };
-    })();
-
-    global.localStorage = localStorageMock;
-    addNameToList(names, 'Pepe');
-
-    expect(names).toEqual(['Pepe']);
-    expect(localStorage.getItem('names')).toEqual(JSON.stringify(['Pepe']));
-  });
-});
 
 
