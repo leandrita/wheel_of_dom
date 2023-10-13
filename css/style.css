@@ -27,7 +27,6 @@ body {
   cursor: pointer;
   text-align: center;
   color: var(--color-blue);
-  /* transition: background-color 0.2s, color 0.2s; */
 }
 
 #name-list li.selected {
